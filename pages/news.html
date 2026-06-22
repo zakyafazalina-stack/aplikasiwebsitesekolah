@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Pengumuman - SMA Maju Jaya</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .page-content {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #ecf0f1;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .article:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-color: #3498db;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .article h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .article p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .article a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .article a:hover {
+            color: #2980b9;
+        }
+
+        .breadcrumb {
+            padding: 20px 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .sidebar-item a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-item a:hover {
+            color: #2980b9;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-school"></i>
+                <span>SMA Maju Jaya</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="academics.html">Akademik</a></li>
+                <li><a href="teachers.html">Guru</a></li>
+                <li><a href="news.html" class="active">Berita</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Berita & Pengumuman</h1>
+        <p>Informasi terbaru tentang aktivitas sekolah</p>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Beranda</a> / <span>Berita</span>
+            </div>
+
+            <div class="sidebar">
+                <h3><i class="fas fa-filter"></i> Kategori</h3>
+                <div class="sidebar-item"><a href="#">📚 Akademik</a></div>
+                <div class="sidebar-item"><a href="#">🏆 Prestasi</a></div>
+                <div class="sidebar-item"><a href="#">🎉 Acara</a></div>
+                <div class="sidebar-item"><a href="#">📢 Pengumuman</a></div>
+            </div>
+
+            <div class="content-section">
+                <h2>Berita Terbaru</h2>
+
+                <article class="article">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="fas fa-calendar"></i> 22 Juni 2024</span>
+                        <span class="article-category">Akademik</span>
+                    </div>
+                    <h3>Peluncuran Program STEM 2024 di SMA Maju Jaya</h3>
+                    <p>
+                        SMA Maju Jaya dengan bangga mengumumkan peluncuran Program STEM (Science, Technology, Engineering, and Mathematics) yang komprehensif untuk tahun ajaran 2024. Program ini dirancang untuk mempersiapkan siswa menghadapi era digital dan persaingan global.
+                    </p>
+                    <p>
+                        Dengan dukungan dari universitas-universitas terkemuka dan perusahaan teknologi internasional, program ini menawarkan kurikulum yang inovatif, mentor berpengalaman, dan akses ke fasilitas laboratorium tercanggih. Siswa akan mendapatkan pengalaman praktis melalui project-based learning dan magang di industri.
+                    </p>
+                    <a href="#">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="fas fa-calendar"></i> 15 Juni 2024</span>
+                        <span class="article-category">Prestasi</span>
+                    </div>
+                    <h3>Siswa SMA Maju Jaya Juara Olimpiade Sains Nasional</h3>
+                    <p>
+                        Kami dengan penuh kebanggaan mengumumkan bahwa tim siswa SMA Maju Jaya telah meraih penghargaan tertinggi dalam Olimpiade Sains Nasional kategori Biologi. Prestasi luar biasa ini merupakan hasil dari dedikasi siswa dan pembimbing yang luar biasa.
+                    </p>
+                    <p>
+                        Tim yang terdiri dari tiga siswa kelas XI ini berhasil mengalahkan ratusan peserta dari sekolah-sekolah di seluruh Indonesia. Mereka menunjukkan pemahaman mendalam tentang materi pelajaran dan kemampuan problem-solving yang exceptional.
+                    </p>
+                    <a href="#">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="fas fa-calendar"></i> 10 Juni 2024</span>
+                        <span class="article-category">Acara</span>
+                    </div>
+                    <h3>Wisuda Angkatan 2024 Akan Dilaksanakan Minggu Depan</h3>
+                    <p>
+                        Upacara wisuda angkatan lulusan 2024 SMA Maju Jaya akan dilaksanakan pada hari Sabtu, 15 Juni 2024 pukul 08:00 WIB di Auditorium Sekolah. Acara ini akan dihadiri oleh seluruh siswa kelas XII, keluarga siswa, guru, dan pejabat pemerintah daerah.
+                    </p>
+                    <p>
+                        Wisuda tahun ini menandai akhir dari perjalanan pendidikan 350 siswa yang telah lulus dengan memuaskan. Mereka siap melanjutkan pendidikan ke perguruan tinggi dan berkontribusi untuk masyarakat dan bangsa.
+                    </p>
+                    <a href="#">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="fas fa-calendar"></i> 5 Juni 2024</span>
+                        <span class="article-category">Pengumuman</span>
+                    </div>
+                    <h3>Pembukaan Pendaftaran Siswa Baru Tahun Ajaran 2024/2025</h3>
+                    <p>
+                        Pendaftaran calon siswa baru untuk tahun ajaran 2024/2025 telah dibuka. Calon siswa dapat mendaftar melalui website sekolah atau langsung ke kantor administrasi. Gelombang pertama pendaftaran berlangsung hingga akhir Juni 2024.
+                    </p>
+                    <p>
+                        Proses seleksi meliputi tes kemampuan akademik, tes psikologi, dan wawancara. Hasil pengumuman penerimaan siswa baru akan diumumkan pada pertengahan Juli 2024. Untuk informasi lebih lengkap, hubungi bagian penerimaan siswa baru.
+                    </p>
+                    <a href="#">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="fas fa-calendar"></i> 1 Juni 2024</span>
+                        <span class="article-category">Akademik</span>
+                    </div>
+                    <h3>Kegiatan Pembelajaran Akhir Tahun Ajaran 2023/2024</h3>
+                    <p>
+                        Minggu terakhir pembelajaran untuk tahun ajaran 2023/2024 dimulai dengan semangat dan antusiasme tinggi dari seluruh siswa. Guru-guru memberikan review materi dan persiapan untuk ujian akhir semester yang akan dilaksanakan minggu depan.
+                    </p>
+                    <p>
+                        Selain pembelajaran akademik, sekolah juga mengadakan berbagai acara seremonial dan kegiatan sosial sebagai refleksi dan apresiasi atas capaian siswa selama satu tahun ajaran ini.
+                    </p>
+                    <a href="#">Baca Selengkapnya →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tentang SMA Maju Jaya</h4>
+                    <p>SMA Maju Jaya adalah sekolah menengah atas yang berkomitmen memberikan pendidikan berkualitas tinggi kepada generasi penerus bangsa.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="academics.html">Akademik</a></li>
+                        <li><a href="news.html">Berita</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <p>Alamat: Jl. Pendidikan No. 123, Kota Pendidikan</p>
+                    <p>Telepon: (021) 1234-5678</p>
+                    <p>Email: info@smamajujaya.sch.id</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SMA Maju Jaya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,199 +1,202 @@
-# 🚀 QUICK START GUIDE - Website SMA Maju Jaya
+# 🚀 QUICK START - Website Sekolah SMA Maju Jaya
 
-## ✅ Apa yang telah dibuat
+## ⚡ 5 Menit Setup
 
-Saya telah membuat website sekolah profesional yang lengkap dengan semua fitur yang Anda butuhkan.
-
-### 📄 **File-File HTML**
-```
-✅ index.html              - Halaman beranda utama
-✅ gallery.html            - Galeri fasilitas sekolah  
-✅ pages/about.html        - Halaman tentang sekolah
-✅ pages/academics.html    - Program akademik dan kurikulum
-✅ pages/teachers.html     - Data guru dan staf
-✅ pages/news.html         - Berita dan pengumuman
-✅ pages/contact.html      - Formulir kontak & informasi
-```
-
-### 🎨 **Styling & Script**
-```
-✅ assets/css/style.css    - CSS lengkap (1200+ lines) dengan responsive design
-✅ assets/js/script.js     - JavaScript interaktif (350+ lines)
-✅ assets/images/          - Folder untuk menyimpan gambar
-```
-
-### 📚 **Dokumentasi**
-```
-✅ README.md                    - Dokumentasi lengkap
-✅ CHANGELOG.md                 - Daftar fitur & versi
-✅ IMPLEMENTATION_GUIDE.md      - Panduan implementasi & backend
-✅ QUICK_START.md              - File ini
-```
-
----
-
-## 🎯 Fitur-Fitur Utama
-
-### 1️⃣ **Responsive Design**
-- ✅ Mobile-first approach
-- ✅ Sempurna di smartphone, tablet, dan desktop
-- ✅ Hamburger menu otomatis di mobile
-
-### 2️⃣ **Interaktif & Animasi**
-- ✅ Smooth navigation
-- ✅ Counter animation di statistik
-- ✅ Hover effects pada card
-- ✅ Form validation real-time
-- ✅ Notification system
-
-### 3️⃣ **Konten Lengkap**
-- ✅ 9 halaman HTML
-- ✅ 50+ kartu/komponen
-- ✅ 9 guru dengan detail
-- ✅ 5 berita contoh
-- ✅ 9 fasilitas galeri
-
-### 4️⃣ **Professional Design**
-- ✅ Modern color scheme
-- ✅ Font Awesome icons
-- ✅ Clean typography
-- ✅ Consistent branding
-- ✅ SEO-friendly
-
----
-
-## 🚀 Cara Menjalankan
-
-### **Metode 1: Live Server (Recommended)**
-
-1. **Buka VS Code**
-   ```bash
-   code /workspaces/aplikasiwebsitesekolah
-   ```
-
-2. **Install Live Server Extension**
-   - Klik Extensions (Ctrl+Shift+X)
-   - Cari "Live Server"
-   - Install dari Ritwick Dey
-
-3. **Jalankan Live Server**
-   - Klik kanan `index.html`
-   - Pilih "Open with Live Server"
-   - Browser otomatis terbuka di `http://localhost:5500`
-
-### **Metode 2: Buka File Langsung**
-- Buka File Explorer
-- Cari file `index.html`
-- Double-click untuk membuka di browser default
-
-### **Metode 3: Python Simple Server**
+### 1️⃣ Install & Setup
 ```bash
 cd /workspaces/aplikasiwebsitesekolah
-python -m http.server 8000
-# Buka http://localhost:8000 di browser
+npm install
+node database.js
+npm start
+```
+
+### 2️⃣ Buka Browser
+
+**Website:** `http://localhost:3000`  
+**Admin Panel:** `http://localhost:3000/admin/`
+
+### 3️⃣ Login Admin
+```
+Username: admin
+Password: admin123
 ```
 
 ---
 
-## 📝 Langkah-Langkah Kustomisasi
+## 🎯 Apa Bisa Dilakukan
 
-### **Step 1: Ubah Nama Sekolah**
-1. Buka Find & Replace: `Ctrl+H` (atau `Cmd+H` di Mac)
-2. **Find:** `SMA Maju Jaya`
-3. **Replace:** `Nama Sekolah Anda`
-4. Klik "Replace All" (Ctrl+Alt+Enter)
+### 👥 Admin bisa:
+- ✅ Login ke admin panel
+- ✅ Tambah/edit/hapus berita
+- ✅ Tambah/edit/hapus guru
+- ✅ Lihat pesan kontak masuk
+- ✅ Update status kontak (Baru → Dibaca → Dijawab)
+- ✅ Lihat statistik di dashboard
 
-### **Step 2: Ubah Kontak & Alamat**
-**File:** `index.html`, `pages/contact.html` dan lainnya
+### 🌐 Pengunjung bisa:
+- ✅ Buka halaman website
+- ✅ Lihat guru (load dari database)
+- ✅ Baca berita (load dari database)
+- ✅ Kirim pesan kontak (tersimpan ke database)
 
-Cari dan ubah:
-- `Jl. Pendidikan No. 123` → Alamat sekolah Anda
-- `(021) 1234-5678` → Telepon sekolah
-- `info@smamajujaya.sch.id` → Email sekolah
+---
 
-### **Step 3: Ubah Warna**
-**File:** `assets/css/style.css` (baris 1-10)
+## 📱 Halaman Website
 
-```css
-:root {
-    --primary-color: #2c3e50;      /* Ubah warna navbar */
-    --secondary-color: #3498db;    /* Ubah warna tombol */
-    --accent-color: #e74c3c;       /* Ubah warna highlight */
-}
-```
+| Halaman | URL | Status |
+|---------|-----|--------|
+| Beranda | / | ✅ Aktif |
+| Tentang | /pages/about.html | ✅ Aktif |
+| Akademik | /pages/academics.html | ✅ Aktif |
+| Guru | /pages/teachers.html | ✅ Dynamic |
+| Berita | /pages/news.html | ✅ Dynamic |
+| Kontak | /pages/contact.html | ✅ API Connected |
+| Galeri | /gallery.html | ✅ Aktif |
 
-**Color Palette yang bagus:**
-- Blue: #3498db, #2980b9
-- Green: #27ae60, #229954
-- Purple: #8e44ad, #6c3483
-- Orange: #e74c3c, #c0392b
+---
 
-### **Step 4: Ubah Data Guru**
-**File:** `pages/teachers.html`
+## 🔑 Important Commands
 
-Cari card guru dan ubah:
-```html
-<h3>Nama Guru</h3>
-<div class="subject">Mata Pelajaran</div>
-<p>X tahun pengalaman</p>
-<div class="qualifications">Sertifikasi</div>
-```
+```bash
+# Start server
+npm start
 
-### **Step 5: Ubah Berita**
-**File:** `pages/news.html`
+# Start with auto-reload
+npm run dev
 
-Update artikel dengan format:
-```html
-<article class="article">
-    <div class="article-meta">
-        <span class="article-date">Tanggal</span>
-        <span class="article-category">Kategori</span>
-    </div>
-    <h3>Judul Berita</h3>
-    <p>Konten artikel...</p>
-</article>
+# Install dependencies
+npm install
+
+# Initialize/Reset database
+node database.js
+
+# Check if port 3000 is busy
+lsof -i :3000
+
+# Kill process on port 3000
+kill -9 $(lsof -ti:3000)
 ```
 
 ---
 
-## 🎨 Tip Desain
+## 🔐 Default Credentials
 
-### **Warna Tema Populer**
-
-**Biru Profesional** (Default sekarang)
-```css
---primary-color: #2c3e50;      /* Navy */
---secondary-color: #3498db;    /* Sky Blue */
---accent-color: #e74c3c;       /* Red */
+```
+Username: admin
+Password: admin123
 ```
 
-**Hijau Edukatif**
-```css
---primary-color: #16a085;      /* Dark Teal */
---secondary-color: #1abc9c;    /* Turquoise */
---accent-color: #f39c12;       /* Orange */
-```
-
-**Ungu Kreatif**
-```css
---primary-color: #8e44ad;      /* Dark Purple */
---secondary-color: #9b59b6;    /* Purple */
---accent-color: #3498db;       /* Blue */
-```
-
-**Merah Dinamis**
-```css
---primary-color: #c0392b;      /* Dark Red */
---secondary-color: #e74c3c;    /* Red */
---accent-color: #f39c12;       /* Orange */
+⚠️ **Ubah di production!** Edit `.env`:
+```env
+ADMIN_PASSWORD=password_baru_yang_kuat
 ```
 
 ---
 
-## 🖼️ Menambahkan Gambar
+## 📡 Test API dengan cURL
 
-1. **Simpan gambar** ke folder `assets/images/`
-   - Nama file: `guru-1.jpg`, `fasilitas-lab.jpg`, dll
+```bash
+# Get semua guru
+curl http://localhost:3000/api/teachers
+
+# Get semua berita
+curl http://localhost:3000/api/news
+
+# Get semua kontak (perlu token)
+curl -H "Authorization: Bearer TOKEN" \
+     http://localhost:3000/api/contacts
+
+# Kirim kontak
+curl -X POST http://localhost:3000/api/contacts \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Nama",
+    "email": "email@com",
+    "subject": "Subjek",
+    "message": "Pesan"
+  }'
+
+# Login
+curl -X POST http://localhost:3000/api/admin/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "admin",
+    "password": "admin123"
+  }'
+```
+
+---
+
+## 🆘 Troubleshooting
+
+### ❌ Server error "Port already in use"
+```bash
+kill -9 $(lsof -ti:3000)
+npm start
+```
+
+### ❌ "Cannot find module" error
+```bash
+npm install
+```
+
+### ❌ Database error
+```bash
+rm database/sekolah.db
+node database.js
+npm start
+```
+
+### ❌ Admin panel blank
+1. Open DevTools (F12)
+2. Check Console for errors
+3. Refresh page (Ctrl+R)
+4. Restart server
+
+---
+
+## 📚 Dokumentasi Lengkap
+
+- **README.md** - Overview project
+- **README_PRODUCTION.md** - Production deployment
+- **BACKEND_SETUP.md** - Setup backend detail
+- **USER_GUIDE.md** - Panduan lengkap penggunaan
+- **QUICK_START.md** - File ini
+
+---
+
+## 🎯 Next: Ubah Admin Password
+
+Edit file `.env`:
+```env
+# Ubah dari:
+ADMIN_PASSWORD=admin123
+
+# Menjadi:
+ADMIN_PASSWORD=password_baru_yang_kuat_minimal_8_karakter
+```
+
+Restart server:
+```bash
+# Tekan Ctrl+C untuk stop
+# Kemudian:
+npm start
+```
+
+---
+
+## ✨ System Status
+
+✅ Backend: Running on port 3000  
+✅ Database: SQLite initialized  
+✅ Admin Panel: Ready to use  
+✅ API: All endpoints active  
+
+**Website Anda siap digunakan!** 🎉
+
+---
+
+**Untuk bantuan lebih lanjut baca USER_GUIDE.md**
 
 2. **Gunakan di HTML:**
    ```html

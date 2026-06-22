@@ -376,8 +376,10 @@
     </footer>
 
     <script>
+        const API_URL = 'http://localhost:3000/api';
+
         // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -396,14 +398,34 @@
                 return;
             }
 
-            // Here you would typically send the form data to a server
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            showNotification('Pesan Anda telah berhasil dikirim. Terima kasih!', 'success');
-            
-            // Reset form
-            this.reset();
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                showNotification('Email tidak valid', 'error');
+                return;
+            }
+
+            try {
+                // Send to API
+                const response = await fetch(`${API_URL}/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showNotification('✅ ' + data.message, 'success');
+                    this.reset();
+                } else {
+                    showNotification('❌ ' + data.message, 'error');
+                }
+            } catch (err) {
+                showNotification('❌ Gagal mengirim pesan: ' + err.message, 'error');
+            }
         });
 
         function showNotification(message, type = 'success') {
